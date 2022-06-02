@@ -36,7 +36,8 @@
             android:id="@+id/b3"
             style="@style/btnMenu"
             android:onClick="acces"
-            android:text="@string/titremenu3" />
+            android:text="@string/titremenu3"
+            />
     </LinearLayout>
 
 </LinearLayout>

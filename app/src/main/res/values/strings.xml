@@ -4,9 +4,11 @@
     <string name="titremenu">Menu Generale</string>
 
     <string name="titremenu1">Ajouter Une Entreprise</string>
-    <string name="titremenu3">Lister de tous les Entreprise produit</string>
+    <string name="titremenu2">Editer Une Entreprise</string>
+
+    <string name="titremenu3">Lister de tous les Entreprise</string>
 
     <string name="text1">Tapez Voter Raison Sociale ...</string>
     <string name="text2">Tapez Voter Adresse...</string>
-    <string name="text3">Tapez Voter Capitale... </string>
+    <string name="text3">Tapez Voter Capitale...</string>
 </resources>
