@@ -48,7 +48,7 @@
             android:onClick="enregistre"/>
         <Button
             style="@style/btnActv"
-            android:text="string/btn2"
+            android:text="@string/btn2"
             android:id="@+id/b2"
             android:onClick="Annuler"
             />
