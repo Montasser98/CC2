@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CC2">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".ListeEntreprise"
             android:exported="false" />
         <activity

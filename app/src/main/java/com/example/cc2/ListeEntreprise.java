@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
 import java.util.ArrayList;
 
@@ -23,11 +24,17 @@ public class ListeEntreprise extends AppCompatActivity {
 
         ArrayList<String> nomsEntr = new ArrayList<>();
         for(Entreprise pp: ent)
-            nomsEntr.add(pp.getID() + "" +
+            nomsEntr.add(pp.getID() + ""
+                    );
+        ArrayList<String> nomsEntrr = new ArrayList<>();
+        for(Entreprise pp: ent)
+            nomsEntr.add(
                     " " + pp.getCapitale());
 
-        ArrayAdapter ad = new ArrayAdapter(this,android.R.layout.simple_list_item_1,nomsEntr);
+        String[] from = {"Raison Sociale" +"Capital"};
+        int[] to ={R.id.t1,R.id.t2};
 
-        lst.setAdapter(ad);
+        SimpleAdapter ade = new SimpleAdapter(this,R.layout.activity_main2,from,to);
+        lst.setAdapter(ade);
     }
 }
