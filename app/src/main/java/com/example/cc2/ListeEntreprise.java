@@ -8,6 +8,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ListeEntreprise extends AppCompatActivity {
     MyDatabase db;
@@ -22,19 +23,24 @@ public class ListeEntreprise extends AppCompatActivity {
 
         ArrayList<Entreprise> ent = MyDatabase.getAllEntreprise(db.getReadableDatabase());
 
+        ArrayList<HashMap<String,Object>> list_etds = new ArrayList<>();
+
+        for(Entreprise e:ent){
+            HashMap<String, Object> item = new HashMap<>();
+            item.put("Raison Sociale",e.getRaisonSociale());
+
+
+                item.put("Capital",e.getCapitale());
+            list_etds.add(item);
+        }
         ArrayList<String> nomsEntr = new ArrayList<>();
-        for(Entreprise pp: ent)
-            nomsEntr.add(pp.getID() + ""
-                    );
-        ArrayList<String> nomsEntrr = new ArrayList<>();
-        for(Entreprise pp: ent)
-            nomsEntr.add(
-                    " " + pp.getCapitale());
+
 
         String[] from = {"Raison Sociale" +"Capital"};
-        int[] to ={R.id.t1,R.id.t2};
+        int[] to ={R.id.Res,R.id.Cap};
 
-        SimpleAdapter ade = new SimpleAdapter(this,R.layout.activity_main2,from,to);
+        SimpleAdapter ade = new SimpleAdapter(this,list_etds,R.layout.activity_main2,from,to);
         lst.setAdapter(ade);
+
     }
 }
