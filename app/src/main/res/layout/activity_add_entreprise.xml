@@ -33,7 +33,7 @@
             style="@style/titre"
             android:id="@+id/t3"
             android:layout_marginTop="40dp"
-            android:text="Tapez Voter Capitale... "/>
+            android:text="@string/text3"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,12 +43,12 @@
         >
         <Button
             style="@style/btnActv"
-            android:text="Enregister"
+            android:text="@string/btn1"
             android:id="@+id/b1"
             android:onClick="enregistre"/>
         <Button
             style="@style/btnActv"
-            android:text="Annuler"
+            android:text="string/btn2"
             android:id="@+id/b2"
             android:onClick="Annuler"
             />
