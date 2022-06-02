@@ -19,14 +19,14 @@ public class ListeEntreprise extends AppCompatActivity {
         db = new MyDatabase(this);
         lst = findViewById(R.id.lst);
 
-        ArrayList<Entreprise> prds = MyDatabase.getAllEntreprise(db.getReadableDatabase());
+        ArrayList<Entreprise> ent = MyDatabase.getAllEntreprise(db.getReadableDatabase());
 
-        ArrayList<String> nomsProds = new ArrayList<>();
-        for(Entreprise pp: prds)
-            nomsProds.add(pp.getID() + " " +
-                     + pp.getCapitale());
+        ArrayList<String> nomsEntr = new ArrayList<>();
+        for(Entreprise pp: ent)
+            nomsEntr.add(pp.getID() + "" +
+                    " " + pp.getCapitale());
 
-        ArrayAdapter ad = new ArrayAdapter(this,android.R.layout.simple_list_item_1,nomsProds);
+        ArrayAdapter ad = new ArrayAdapter(this,android.R.layout.simple_list_item_1,nomsEntr);
 
         lst.setAdapter(ad);
     }
