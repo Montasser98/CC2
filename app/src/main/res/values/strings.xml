@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CC2</string>
-</resources>
+
+    <string name="titremenu">Menu Generale</string>
+
+    <string name="titremenu1">Ajouter Une Entreprise</string>
+    <string name="titremenu3">Lister de tous les Entreprise produit</string>
+
+    <string name="titremenu2">Editer produit</string>
+    </resources>
