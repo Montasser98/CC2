@@ -42,4 +42,6 @@ public class AddEntreprise extends AppCompatActivity {
         Intent i=new Intent(this,MainActivity.class);
         startActivity(i);
     }
+
+
 }
